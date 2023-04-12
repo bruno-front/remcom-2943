@@ -1,0 +1,19 @@
+.header {
+  padding: 25px 0;
+  color: $color-light;
+  background-color: $color-dark;
+}
+
+.header-inner {
+  @include inner;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  color: $color-light;
+  margin-right: auto;
+}
