@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 66.66%;
+  margin: 0 auto;
+}
+
+.form-field {
+  flex-basis: 100%;
+  padding: 0 15px;
+  margin-top: 30px;
+}
+
+.form-field-half {
+  flex-basis: 50%;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  color: $color-accent;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: inherit;
+  background-color: $color-light;
+  border: none;
+  border-radius: 8px;
+}
+
+.form-textarea {
+  height: 167px;
+  resize: vertical;
+}
+
+.form-checkbox-text {
+  font-size: 20px;
+  line-height: 27px;
+
+  a {
+    color: $color-accent;
+  }
+}

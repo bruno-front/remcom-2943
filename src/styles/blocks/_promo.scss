@@ -1,4 +1,37 @@
 .promo {
-  height: 300px;
+  padding: 140px 0;
   background-color: rgba($color-light, .2);
+}
+
+.promo-inner {
+  @include inner;
+}
+
+.promo-wrap {
+  display: flex;
+}
+
+.promo-desc {
+  flex-basis: 50%;
+}
+
+.promo-title {
+  margin-bottom: 70px;
+  color: $color-accent;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+
+  span {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-title;
+    font-size: 116px;
+    line-height: 136px;
+    font-weight: 300;
+  }
+}
+
+.promo-media {
+  flex-basis: 50%;
 }
