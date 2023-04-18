@@ -46,7 +46,10 @@
             <a href="#" class="btn">Отправить заявку</a>
           </div>
           <div class="promo-media">
-
+            <figure class="promo-figure">
+              <img src="images/promo-photo.jpg" alt="" class="promo-img">
+              <figcaption class="promo-img-desc">Мужики варят чифирь</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -65,11 +68,11 @@
         <form action="" class="form">
           <div class="form-field form-field-half">
             <label for="name" class="form-label">Имя</label>
-            <input id="name" name="name" type="text" class="form-input">
+            <input id="name" name="name" type="button" class="form-input">
           </div>
           <div class="form-field form-field-half">
             <label for="phone" class="form-label">Телефон</label>
-            <input id="phone" name="phone" type="text" class="form-input">
+            <input id="phone" name="phone" type="tel" class="form-input">
           </div>
           <div class="form-field">
             <label for="message" class="form-label">Что ремонтируем?</label>
@@ -78,12 +81,13 @@
           <div class="form-field">
             <input id="agree" name="agree" type="checkbox" class="form-checkbox">
             <label for="agree" class="form-checkbox-text">
+              <i class="form-icon-check"></i>
               Даю согласие на обработку персональных данных с соответствии с
               <a href="#">политикой обработки персональных данных</a>
             </label>
           </div>
           <div class="form-field">
-            <button class="btn btn-full">Отправить</button>
+            <button type="submit" class="btn btn-full">Отправить</button>
           </div>
         </form>
       </div>

@@ -13,6 +13,7 @@
 
 .promo-desc {
   flex-basis: 50%;
+  padding-right: 15px;
 }
 
 .promo-title {
@@ -34,4 +35,19 @@
 
 .promo-media {
   flex-basis: 50%;
+  padding-left: 15px;
+}
+
+.promo-figure {
+  position: relative;
+}
+
+.promo-img-desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: $color-light;
+  background-color: rgba($color-dark, .8);
 }

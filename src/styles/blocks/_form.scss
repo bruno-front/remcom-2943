@@ -41,6 +41,24 @@
   resize: vertical;
 }
 
+.form-icon-check {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid $color-accent;
+  border-radius: 4px;
+}
+
+.form-checkbox {
+  display: none;
+}
+
+.form-checkbox:checked+.form-checkbox-text {
+  .form-icon-check {
+    background-color: $color-accent;
+  }
+}
+
 .form-checkbox-text {
   font-size: 20px;
   line-height: 27px;
