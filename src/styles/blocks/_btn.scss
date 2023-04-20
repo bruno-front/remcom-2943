@@ -16,3 +16,18 @@
 .btn-full {
   width: 100%;
 }
+
+.btn-promo-desc {
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.btn-promo-media {
+  display: none;
+
+  @media (max-width: $mobile-max) {
+    display: inline-block;
+    margin-top: 50px;
+  }
+}
