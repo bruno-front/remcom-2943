@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   width: 66.66%;
   margin: 0 auto;
+
+  @media (max-width: $tablet-max) {
+    width: auto;
+    margin: 0 -15px;
+  }
 }
 
 .form-field {
@@ -13,6 +18,10 @@
 
 .form-field-half {
   flex-basis: 50%;
+
+  @media (max-width: $mobile-max) {
+    flex-basis: 100%;
+  }
 }
 
 .form-label {
