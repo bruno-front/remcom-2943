@@ -10,3 +10,25 @@
 .works-title {
   @include section-title();
 }
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: -$gap-half;
+  margin-right: -$gap-half;
+  list-style: none;
+}
+
+.works-item {
+  flex-basis: 25%;
+  padding: $gap-half;
+}
+
+.works-card {
+  padding: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px rgba($color-accent, 0.2);
+  border-radius: 4px;
+
+}

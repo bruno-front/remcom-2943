@@ -10,3 +10,7 @@
 .faq-title {
   @include section-title();
 }
+
+.faq-content {
+  margin-top: 100px;
+}

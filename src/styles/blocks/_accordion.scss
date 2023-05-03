@@ -1,0 +1,32 @@
+.accordion {
+  margin-top: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px rgba($color-accent, 0.2);
+  border-radius: 4px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 30px;
+  font-family: $font-title;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: left;
+  border: none;
+  color: $color-dark;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.accordion-answer {
+  display: none;
+  padding: 0 30px 30px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
