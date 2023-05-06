@@ -75,4 +75,25 @@ $(document).ready(function () {
   });
 
 
+  // Карусель на странице Works.html
+  $('.js-slider').slick();
+
+
+  // Ajax запрос отзывов
+  $.ajax({
+    type: 'POST',
+    url: '../jsons/reviews.json',
+    data: {
+      quantity: 4
+    },
+    success: function (res) {
+      console.log('Ура работает!');
+      console.log(res);
+    },
+    error: function (err) {
+      console.log(err);
+      console.log('Все пропало - гипс снимают, клиент уезжает!!!');
+    }
+  });
+
 });

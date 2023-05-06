@@ -1,0 +1,12 @@
+.gallery {
+  padding: 140px 0 130px;
+  background-color: $color-light;
+}
+
+.gallery-inner {
+  @include inner();
+}
+
+.gallery-title {
+  @include section-title();
+}
