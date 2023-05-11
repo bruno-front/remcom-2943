@@ -78,22 +78,53 @@ $(document).ready(function () {
   // Карусель на странице Works.html
   $('.js-slider').slick();
 
-
   // Ajax запрос отзывов
-  $.ajax({
-    type: 'POST',
-    url: '../jsons/reviews.json',
-    data: {
-      quantity: 4
-    },
-    success: function (res) {
-      console.log('Ура работает!');
-      console.log(res);
-    },
-    error: function (err) {
-      console.log(err);
-      console.log('Все пропало - гипс снимают, клиент уезжает!!!');
-    }
+  $('.js-reviews-btn').on('click', function () {
+    $(this).text('...');
+    $(this).attr('disabled', 'disabled');
+
+    $.ajax({
+      type: 'POST',
+      url: '../jsons/reviews.json',
+      data: {
+        quantity: 4
+      },
+      success: function (res) {
+        if (!res.isShowMore) {
+          $('.js-reviews-btn').hide();
+        }
+        createHtmlString(res.reviews);
+
+        $('.js-reviews-btn').text('Еще отзывы');
+        $('.js-reviews-btn').removeAttr('disabled');
+      },
+      error: function (err) {
+        console.log(err);
+        console.log('Все пропало - гипс снимают, клиент уезжает!!!');
+      }
+    });
   });
+
+  function createHtmlString(arr) {
+    let string = '';
+
+    arr.forEach(function (elem) {
+      string = string + `<div class="reviews-item">
+        <img src="${elem.photoUrl}" alt="${elem.photoAlt}" class="reviews-ava" />
+        <div class="reviews-text">
+          <strong class="reviews-name">${elem.name}</strong>
+          <blockquote class="reviews-quote">
+            “${elem.text}”
+          </blockquote>
+        </div>
+      </div>`;
+    });
+
+    addToPage(string);
+  }
+
+  function addToPage(str) {
+    $('.js-reviews-wrap').append(str);
+  }
 
 });
