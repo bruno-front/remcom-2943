@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // Открытие/закрытие меню
   // let isClose = true;
 
@@ -17,7 +16,6 @@ $(document).ready(function () {
     //   isClose = true;
     // }
   });
-
 
   // Аккордионы
   let prevBtn;
@@ -46,7 +44,6 @@ $(document).ready(function () {
     $('.js-contacts-item').removeClass('active');
     $('.js-contacts-item').eq(index).addClass('active');
   });
-
 
   // Фильтры в работах
 
@@ -80,14 +77,14 @@ $(document).ready(function () {
 
   // Ajax запрос отзывов
   $('.js-reviews-btn').on('click', function () {
-    $(this).text('...');
+    $(this).addClass('btn-loading');
     $(this).attr('disabled', 'disabled');
 
     $.ajax({
       type: 'POST',
       url: '../jsons/reviews.json',
       data: {
-        quantity: 4
+        quantity: 4,
       },
       success: function (res) {
         if (!res.isShowMore) {
@@ -95,7 +92,7 @@ $(document).ready(function () {
         }
         createHtmlString(res.reviews);
 
-        $('.js-reviews-btn').text('Еще отзывы');
+        $('.js-reviews-btn').removeClass('btn-loading');
         $('.js-reviews-btn').removeAttr('disabled');
       },
       error: function (err) {
@@ -126,5 +123,4 @@ $(document).ready(function () {
   function addToPage(str) {
     $('.js-reviews-wrap').append(str);
   }
-
 });
